@@ -9,10 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var theLbl: UILabel!
+    
+    enum Cars: Int {
+        case BMW = 0
+        case HONDA = 1
+        case TESLA = 2
+        case SUBARU = 3
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        theLbl.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +29,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onBtnTapped(sender: UIButton!) {
+        
+        if sender.tag == Cars.BMW.rawValue {
+            theLbl.text = "BMW is awesome!"
+        } else if sender.tag == Cars.HONDA.rawValue {
+            theLbl.text = "Somebody get that shit out of my face!"
+        } else if sender.tag == Cars.TESLA.rawValue {
+            theLbl.text = "The new kid on the block is cool!"
+        } else {
+            theLbl.text = "This is the ugliest car, ever!"
+        }
+        
+    }
 
 }
 

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="enums_and_ugly_cars" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGD-JK-IuR">
+                                <rect key="frame" x="207" y="28" width="187" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="ELg-zI-fTq"/>
+                                    <constraint firstAttribute="width" constant="187" id="mXW-up-Gdu"/>
+                                </constraints>
+                                <state key="normal" image="bwm"/>
+                                <connections>
+                                    <action selector="onBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="epy-et-vGY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ho3-cN-dGj">
+                                <rect key="frame" x="207" y="144" width="187" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="4Q5-aN-QBr"/>
+                                    <constraint firstAttribute="width" constant="187" id="sp8-ir-t6O"/>
+                                </constraints>
+                                <state key="normal" image="honda"/>
+                                <connections>
+                                    <action selector="onBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bD-TQ-hlV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRv-JC-hap">
+                                <rect key="frame" x="207" y="260" width="187" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="1ET-2g-hXN"/>
+                                    <constraint firstAttribute="width" constant="187" id="75o-eR-bXE"/>
+                                </constraints>
+                                <state key="normal" image="tesla"/>
+                                <connections>
+                                    <action selector="onBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6h-gC-k0B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zip-k1-hsO">
+                                <rect key="frame" x="207" y="376" width="187" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="eG3-Ea-giI"/>
+                                    <constraint firstAttribute="height" constant="108" id="w5X-2T-qpm"/>
+                                </constraints>
+                                <state key="normal" image="subaru"/>
+                                <connections>
+                                    <action selector="onBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jcw-ZU-aEd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaH-hz-4dJ">
+                                <rect key="frame" x="20" y="492" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZUC-qC-uMF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ho3-cN-dGj" firstAttribute="top" secondItem="hGD-JK-IuR" secondAttribute="bottom" constant="8" id="2Ns-eG-BmZ"/>
+                            <constraint firstItem="hGD-JK-IuR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BE1-WX-X3k"/>
+                            <constraint firstItem="Zip-k1-hsO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HxC-MM-Gvg"/>
+                            <constraint firstItem="jRv-JC-hap" firstAttribute="top" secondItem="ho3-cN-dGj" secondAttribute="bottom" constant="8" id="JXX-8Y-z5E"/>
+                            <constraint firstItem="LaH-hz-4dJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qrp-se-GRR"/>
+                            <constraint firstItem="hGD-JK-IuR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="STf-tR-Zbf"/>
+                            <constraint firstItem="jRv-JC-hap" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uw4-W4-h7X"/>
+                            <constraint firstItem="LaH-hz-4dJ" firstAttribute="top" secondItem="Zip-k1-hsO" secondAttribute="bottom" constant="8" id="Yho-dq-p4t"/>
+                            <constraint firstItem="LaH-hz-4dJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZOG-Gz-jxY"/>
+                            <constraint firstItem="LaH-hz-4dJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lMn-HE-V6R"/>
+                            <constraint firstItem="ho3-cN-dGj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nFV-pd-9Pv"/>
+                            <constraint firstItem="Zip-k1-hsO" firstAttribute="top" secondItem="jRv-JC-hap" secondAttribute="bottom" constant="8" id="xkw-ts-RBW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="theLbl" destination="LaH-hz-4dJ" id="ufv-ZJ-ELk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="325" y="400"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bwm" width="884" height="497"/>
+        <image name="honda" width="640" height="480"/>
+        <image name="subaru" width="1024" height="768"/>
+        <image name="tesla" width="2647" height="1600"/>
+    </resources>
 </document>
